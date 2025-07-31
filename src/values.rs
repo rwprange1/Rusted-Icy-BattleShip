@@ -108,26 +108,14 @@ pub struct BattleShip{
 // the lists of commands
 #[derive(Clone, PartialEq, Debug)]
 pub enum Commands{
-    // displays the board
-    MAP,
     // shoots at someone
     FIRE,
     // leave the game
     END,
-    // display the names of the players in the game
-    LIST,
-    // display the current players turn
-    TURN,
     // starts the game
     START,
     // invalid
     INVALID,
-    
-    SelectSquare (CellState),
-    
-    ConnectingToServer (bool),
-    
-    EnteredIP (String)
 }
 
 impl CellState {
