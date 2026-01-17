@@ -1,10 +1,7 @@
-use iced::overlay::menu;
 
-use iced::theme::Palette;
 use iced::widget::{button, container, pick_list};
 use iced::{Border, Color, Shadow};
-use iced::window::Position::Default;
-use crate::values::Board;
+
 
 macro_rules! rgb {
     ($r:expr, $g:expr, $b:expr) => {
@@ -17,18 +14,7 @@ pub const BLUE: Color = Color::from_rgb(0.0, 0.0, 1.0);
 pub const GREEN: Color = Color::from_rgb(0.0, 1.0, 0.0);
 pub const ORANGE: Color = Color::from_rgb(1.0, 0.5, 0.0);
 
-#[derive(Debug, Clone)]
-pub enum Message {
-    JOIN,
-    JOINING,
-    START,
-    LEAVE,
-    FIRE,
-}
 
-pub struct GameInfo {
-    pub my_board: Board,
-}
 
 pub type BsBtn = fn(&iced::Theme, iced::widget::button::Status) -> button::Style;
 
